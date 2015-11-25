@@ -14,6 +14,7 @@ Your task would be to:
 * adjust the views to add a possibility to switch currencies dynamically (without a page reload)
 * add tests as considered necessary
 * implement the footer matching design included in this repository as footer.png
+* make changes as needed so that the application would be ready for production
 
 Good luck!
 
