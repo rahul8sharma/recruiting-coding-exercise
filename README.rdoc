@@ -16,5 +16,14 @@ Your task would be to:
 * implement the footer matching design included in this repository as footer.png
 * make changes as needed so that the application would be ready for production
 
+We will evaluate how you accomplish the tasks above paying special attention to:
+* documentation you provide
+* git history
+* application behavior - how does the app:
+  * handle the XML data
+  * behave under error conditions
+  * provide accurate prices
+  * perform at scale
+
 Good luck!
 
