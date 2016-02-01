@@ -10,7 +10,7 @@ here: https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist-90d.xml
 
 Your task would be to:
 * get the data about exchange rates
-* provide methods in the model to show price in different currencies
+* provide a method in the model to show price in different currencies
 * adjust the views to add a possibility to switch currencies dynamically (without a page reload)
 * add tests as considered necessary
 * implement the footer matching design included in this repository as footer.png
