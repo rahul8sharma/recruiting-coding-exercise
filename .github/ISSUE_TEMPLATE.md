@@ -1,0 +1,7 @@
+- [ ] sent the coding exercise
+- [ ] got back the code test solution
+- [ ] code test scored (#PR)
+- [ ] onsite interview scheduled
+- [ ] onsite interview scored
+- [ ] offer made
+- [ ] no-hire decision & communicated to candidate
