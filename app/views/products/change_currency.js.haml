@@ -1,0 +1,5 @@
+- @products_with_id_and_price.each do |product|
+  :plain
+    var priceElement = ".currency-tag[data-id=" + "#{product[0]}" + "]";
+    var currentCurrency = "#{product[1]}" + " " + "#{current_currency}";
+    $(priceElement).text(currentCurrency);

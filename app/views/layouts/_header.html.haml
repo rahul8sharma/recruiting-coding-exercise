@@ -1,3 +1,3 @@
 .header
   %a.logo{:href => "#default"} CompanyLogo
-  = select_tag :currency_type, options_for_select(Currency::get_currencies.keys)
+  = select_tag :currency_type, options_for_select(Currency::get_currencies.keys, current_currency),data: { remote: true, url: '/products/change_currency', method: 'get', params: "" }

@@ -3,9 +3,9 @@
 
   %p= @product.description
 
-  %strong
-    = @product.price
-    EUR
+  %strong{class: "currency-tag", data: {id: @product.id}}
+    = @product.get_price_by_currency(current_currency)
+    = current_currency
 
   = link_to 'Shut up and take my money!', '#'
 
