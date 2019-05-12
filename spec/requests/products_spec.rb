@@ -25,11 +25,20 @@ RSpec.describe "Products", type: :request do
         description: Faker::Lorem.paragraph
     end
 
-    it "shows product details" do
+    it "shows product details with EUR" do
       get product_path(@product)
       expect(response).to have_http_status(200)
       price = Nokogiri::HTML(response.body).css('.product strong')
       expect(price.text).to match(/34.56\sEUR/)
+    end
+
+    it "shows product details with USD" do
+      get product_path(@product)
+      params = {currency_type: "USD", product_ids: @product.id.to_s}
+      xhr :post, :change_currency, params
+      expect(response).to have_http_status(200)
+      price = Nokogiri::HTML(response.body).css('.product strong')
+      expect(price.text).to match(/38.81\sUSD/)
     end
   end
 end
