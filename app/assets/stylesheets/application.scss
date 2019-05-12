@@ -71,3 +71,13 @@ body {
   font-weight: bold;
 }
 
+// Footer CSS
+div#footer {
+  width: 100%;
+  height: 200px;
+  margin: 15px 0;
+  padding: 10px 25px;
+  background-image: url('/assets/footer.png');
+  background-size: 100% 100%;
+}
+
