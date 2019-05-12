@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby "2.2.2"
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
@@ -41,4 +43,6 @@ group :development, :test do
   gem 'faker', '~> 1.4.3'
   gem 'nokogiri'
 end
+
+gem 'rails_12factor', group: :production
 
