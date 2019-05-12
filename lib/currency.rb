@@ -23,13 +23,17 @@ module Currency
 	end
 
 	def self.create_currency_rate_file
-		#Connect to data source and download XML data file locally
-		# Get the exchange url from secret file
-		data_source = (open(Rails.application.secrets.EXCHANGE_RATES_URL))
+		begin
+			#Connect to data source and download XML data file locally
+			# Get the exchange url from secret file
+			data_source = (open(Rails.application.secrets.EXCHANGE_RATES_URL))
 
-		# Now I am create this file in root directory.
-		# We can also save it tmp directory
-		IO.copy_stream(data_source, 'currency_rates.xml')
+			# Now I am create this file in root directory.
+			# We can also save it tmp directory
+			IO.copy_stream(data_source, 'currency_rates.xml')
+		rescue OpenURI::HTTPError => ex
+			raise 'URL not found'
+		end
 	end
 
 	def self.collect_correncies
